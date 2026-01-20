@@ -123,3 +123,53 @@ body {
   font-family: var(--font-mono);
   letter-spacing: -0.02em;
 }
+
+/* Mobile Responsive Overrides */
+@media (max-width: 768px) {
+  body {
+    padding: 20px 16px; /* Reduced padding for mobile edges */
+  }
+
+  .main-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .brand h1 {
+    font-size: 22px; /* Slightly smaller header for mobile */
+  }
+
+  /* Grid: Switch from 4 columns to 2 columns for better fit */
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .card {
+    padding: 16px;
+    min-height: 140px; /* More compact cards */
+  }
+
+  /* Typography: Adjust clamp for smaller screens */
+  .value {
+    font-size: clamp(18px, 5vw, 24px); 
+  }
+
+  /* Performance Section: Stack the items vertically */
+  .performance-grid {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .performance-section {
+    padding: 20px;
+  }
+}
+
+/* Extra Small (Phones): Switch to 1 column */
+@media (max-width: 480px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
