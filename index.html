@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Base Analytics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="dashboard">
+      <header class="main-header">
+        <div class="brand">
+          <div class="logo-mark"></div>
+          <h1>BASE <span>Analytics</span></h1>
+        </div>
+        <div class="status-indicator">
+          <span class="dot"></span> Mainnet
+        </div>
+      </header>
+
+      <div class="stats-grid">
+        <div class="card tall">
+          <label>Total BASE Transactions</label>
+          <p class="value mono" id="total-tx-count">0</p>
+        </div>
+        <div class="card">
+          <label>24h Transactions</label>
+          <p class="value" id="tx-count">0</p>
+        </div>
+        <div class="card">
+          <label>Active Wallets (24h)</label>
+          <p class="value" id="active-wallets">0</p>
+        </div>
+        <div class="card highlight">
+          <label>Avg Gas Price</label>
+          <p class="value" id="gas-price">0.00 Gwei</p>
+        </div>
+      </div>
+
+      <section class="performance-section">
+        <h2>Network Performance</h2>
+        <div class="performance-grid">
+          <div class="perf-item">
+            <span>TPS (5m average)</span>
+            <strong id="tps">--</strong>
+          </div>
+          <div class="perf-item">
+            <span>Current Block Height</span>
+            <strong class="mono" id="block-height">--</strong>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>

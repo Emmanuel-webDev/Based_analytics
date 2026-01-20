@@ -1,0 +1,125 @@
+:root {
+  --base-blue: #0052ff;
+  /* The anchor "Base Blue" */
+  --bg-white: #ffffff;
+  --border-light: #e2e8f0;
+  --text-primary: #0052ff;
+  --text-muted: #64748b;
+  --font-main: "Inter", sans-serif;
+  --font-mono: "Roboto Mono", monospace;
+}
+
+body {
+  background-color: var(--bg-white);
+  color: var(--text-primary);
+  font-family: var(--font-main);
+  margin: 0;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.dashboard {
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Header Fixes */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 24px;
+  border-bottom: 2px solid var(--base-blue);
+  padding-bottom: 12px;
+}
+
+.brand h1 {
+  font-size: 28px;
+  font-weight: 800;
+  margin: 8px 0 0 0;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+
+.status-indicator {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+/* Grid & Card Fixes */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* Ensure 4 equal columns */
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  padding: 24px;
+  min-height: 180px;
+  /* Gives enough room for large numbers */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.card label {
+  color: var(--text-muted);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+/* Fix: Dynamic font sizing for large numbers to prevent overflow */
+.value {
+    white-space: nowrap;
+  font-size: clamp(24px, 2.5vw, 36px);
+  font-weight: 700;
+  margin: 0;
+  word-break: break-all;
+  /* Prevents overflow if number is too long */
+  line-height: 1.1;
+}
+
+/* Network Performance Section Fixes */
+.performance-section {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  padding: 32px;
+}
+
+.performance-section h2 {
+  font-size: 22px;
+  font-weight: 800;
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+.performance-grid {
+  display: flex;
+  gap: 48px;
+}
+
+.perf-item span {
+  display: block;
+  color: var(--text-muted);
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.perf-item strong {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.mono {
+  font-family: var(--font-mono);
+  letter-spacing: -0.02em;
+}
